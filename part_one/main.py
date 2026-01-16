@@ -27,8 +27,11 @@ If the division is not even, one of the groups may have fewer members than speci
 
 # total_students: int = int(input("How many students on the course? "))
 # group_size: int = int(input("Desired group size? "))
-# number_of_groups: int = total_students // group_size
-# print(f"Number of groups formed: {number_of_groups}")
+# number_of_groups: int = total_students / group_size
+# if total_students % group_size == 0:
+#     print(f"Number of groups formed: {number_of_groups}")
+# if total_students % group_size != 0:
+#     print(f"Number of groups formed: {number_of_groups  + 1}")
 
 
 """
@@ -171,14 +174,14 @@ Please write a program for solving a quadratic equation of the form ax²+bx+c.
 The program asks for values a, b and c. It should then use the quadratic formula to solve the equation.
 The quadratic formula expressed with the Python sqrt function is as follows:
 """
-import math
+# import math
 
-a_value: int = int(input("Value of a:"))
-b_value: int = int(input("Value of b:"))
-c_value: int = int(input("Value of c:"))
+# a_value: int = int(input("Value of a:"))
+# b_value: int = int(input("Value of b:"))
+# c_value: int = int(input("Value of c:"))
 
-root_one: float = (-b_value + math.sqrt(pow(b_value,2) - (4 * a_value * c_value))) / (2 * a_value)
-root_two: float = (-b_value - math.sqrt(pow(b_value,2) - (4 * a_value * c_value))) / (2 * a_value)
-print(f"The roots are {root_one} and {root_two}")
+# root_one: float = (-b_value + math.sqrt(pow(b_value,2) - (4 * a_value * c_value))) / (2 * a_value)
+# root_two: float = (-b_value - math.sqrt(pow(b_value,2) - (4 * a_value * c_value))) / (2 * a_value)
+# print(f"The roots are {root_one} and {root_two}")
 
 
