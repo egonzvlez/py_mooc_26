@@ -227,4 +227,140 @@ In that case nothing should be printed out, and there should not be any indexing
 Please write a program which asks the user for a positive integer number. 
 The program then prints out a list of multiplication operations until both operands reach the number given by the user. 
 """
-user_str: str = input("")
+# user_int: int = int(input("Please type in a number: "))
+# x: int = 1
+# y: int = 1
+# while x <= user_int:
+#     while y <= user_int:
+#         print(f"{x} x {y} = {x * y}")
+#         y += 1
+#     x += 1
+#     y = 1
+
+"""Problem 23
+Please write a program which asks the user to type in a sentence.
+The program then prints out the first letter of each word in the sentence, each letter on a separate line.
+"""
+# user_str: str = input("Please type in a sentence: ")
+# char_index: int = 0
+# while char_index < len(user_str):
+#     if char_index == 0:
+#         print(user_str[char_index])
+#     elif user_str[char_index] == " ":
+#         print(user_str[char_index + 1])
+#     char_index += 1
+
+"""Problem 24
+Please write a program which asks the user to type in an integer number.
+If the user types in a number equal to or below 0, the execution ends. 
+Otherwise the program prints out the factorial of the number.
+The factorial of a number involves multiplying the number by all the positive integers smaller than itself. 
+In other words, it is the product of all positive integers less than or equal to the number. 
+For example, the factorial of 5 is 1 * 2 * 3 * 4 * 5 = 120.
+"""
+# while True:
+#     user_int: int = int(input("Please type in a number: "))
+#     factorial_total: int = 1
+#     count: int = 1
+#     if user_int <= 0:
+#         print("Thanks and bye!")
+#         break
+#     else:
+#         while count <= user_int:
+#             factorial_total *= count
+#             count += 1
+#     print(f"The factorial of the number {user_int} is {factorial_total}")
+
+"""Problem 25
+Please write a program which asks the user to type in a number.
+The program then prints out all the positive integer values from 1 up to the number. 
+However, the order of the numbers is changed so that each pair or numbers is flipped. That is, 2 comes before 1, 4 before 3 and so forth.
+"""
+# user_int: int = int(input("Please type in a number: "))
+# counter: int = 1
+# while counter <= user_int:
+#     if counter + 1 <= user_int:
+#         print(counter + 1)
+#         print(counter)
+#         counter += 2  
+#     else:
+#         print(counter)
+#         counter += 1
+
+"""Problem 26:
+Please write a program which asks the user to type in a number.
+The program then prints out the positive integers between 1 and the number itself, alternating between the two ends of the range as in the examples below.
+"""
+# user_int: int = int(input("Please type in a number: "))
+# left: int = 1
+# right: int = user_int
+# while left <= right:
+#     print(left)
+#     if left != right:
+#         print(right)
+#     left += 1
+#     right -= 1
+
+"""Problem 27:
+Please write a function named seven_brothers.
+When the function is called, it should print out the names of the seven brothers in alphabetical order, as in the example below
+"""
+# def seven_brothers():
+#     print("Aapo")
+#     print("Eero")
+#     print("Juhani")
+#     print("Lauri")
+#     print("Simeoni")
+#     print("Timo")
+#     print("Tuomas")
+
+"""Problem 28
+The exercise contains the outline of the function first_character. 
+Please complete it so that it prints out the first character of the string it takes as its argument.
+"""
+# def first_character(text: str) -> None:
+#     print(text[0])
+
+"""Problem 29
+Please write a function named mean, which takes three integer arguments. 
+The function should print out the arithmetic mean of the three arguments.
+"""
+# def mean(x: int, y: int, z: int) -> None:
+#     print((x + y + x) / 3)
+
+"""Problem 30
+Please write a function named print_many_times(text, times), which takes a string and an integer as arguments. 
+The integer argument specifies how many times the string argument should be printed out:
+"""
+# def print_many_times(text: str, times: int) -> None:
+#     count: int = 1
+#     while count <= times:
+#         print(text)
+#         count += 1
+
+"""Problem 31
+Please write a function named hash_square(length), which takes an integer argument. 
+The function prints out a square of hash characters, and the argument specifies the length of the side of the square.
+"""
+# def hash_square(length: int) -> None:
+#     count: int = 1
+#     while count <= length:
+#         print("#" * length)
+#         count += 1
+
+"""Problem 32
+Please write a function named chessboard, which prints out a chessboard made out of ones and zeroes.
+The function takes an integer argument, which specifies the length of the side of the board. See the examples below for details:
+"""
+# def chessboard(length: int) -> None:
+#     row: int = 0
+#     while row < length:
+#         if row % 2 == 0:
+#             print(("10" * length)[:length])
+#         else:
+#             print(("01" * length)[:length])
+#         row += 1
+
+"""Problem 33
+Please write a function named squared, which takes a string argument and an integer argument, and prints out a square of characters as specified by the examples below.
+"""
