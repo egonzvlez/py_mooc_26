@@ -164,5 +164,67 @@ If the length of the input string is an odd number, you may print out the word i
 # print("*" * 30)
 
 """Problem 16
-
+Please write a program which asks the user to type in a string. 
+The program then prints out all the substrings which begin with the first character, from the shortest to the longest. 
+Have a look at the example below.
 """
+# user_str: str = input("Please type in a string: ")
+# counter = 1
+# while counter <= len(user_str):
+#     print(user_str[0:counter])
+#     counter += 1
+
+"""Problem 17
+Please write a program which asks the user to type in a string.
+The program then prints out all the substrings which end with the last character, from the shortest to the longest. 
+Have a look at the example below.
+"""
+# user_str = input("Please type in a string: ")
+# i = len(user_str) - 1
+# while i >= 0:
+#     print(user_str[i:])
+#     i -= 1
+
+"""Problem 18
+Please write a program which asks the user to input a string. 
+The program then prints out different messages if the string contains any of the vowels a, e or o.
+You may assume the input will be in lowercase entirely. Have a look at the examples below.
+"""
+# while True:
+#     user_str: str = input("Please type in a string: ")
+#     if "a" in user_str:
+#         print("a found")
+#     if "a" not in user_str:
+#         print("a not found")
+#     if "e" in user_str:
+#         print("e found")
+#     if "e" not in user_str:
+#         print("e not found")
+#     if "o" in user_str:
+#         print("o found")
+#     if "o" not in user_str:
+#         print("o not found")
+#     break
+
+"""Problem 19
+Please write a program which asks the user to type in a string and a single character. 
+The program then prints the first three character slice which begins with the character specified by the user. 
+You may assume the input string is at least three characters long. The program must print out three characters, or else nothing.
+Pay special attention to when there are less than two characters left in the string after the first occurrence of the character looked for. 
+In that case nothing should be printed out, and there should not be any indexing errors when executing the program.
+"""
+# user_str: str = input("Please type in a word: ")
+# user_char: str = input("Please type in a character: ")
+# start: int = user_str.find(user_char)
+# if user_char in user_str:
+#     if len(user_str[start:start + 3]) >= 3:
+#         print(user_str[start:start + 3])
+
+"""Problem 20"""
+"""Problem 21"""
+
+"""Problem 22
+Please write a program which asks the user for a positive integer number. 
+The program then prints out a list of multiplication operations until both operands reach the number given by the user. 
+"""
+user_str: str = input("")
