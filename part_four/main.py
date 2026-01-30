@@ -184,3 +184,77 @@ There will be no spaces in the beginning or at the end of the argument strings.
 # def last_word(text: str):
 #     word = text.split(" ")
 #     return word[-1]
+
+"""Problem 12:
+Please write a program which initialises a list with the values [1, 2, 3, 4, 5]. 
+Then the program should ask the user for an index and a new value, replace the value at the given index, and print the list again. 
+This should be looped over until the user gives -1 for the index. You can assume all given index values will fall within your list.
+"""
+# starting_list = [1,2,3,4,5]
+# while True:
+#     index: int = int(input("Index: "))
+#     if index == -1:
+#         break
+#     value: int = int(input("New value: "))
+
+#     starting_list[index] = value
+#     print(starting_list)
+
+"""Problem 13:
+Please write a program which first asks the user for the number of items to be added.
+Then the program should ask for the given number of values, one by one, and add them to a list in the order they were typed in. 
+Finally, the list is printed out.
+"""
+# total_items = int(input("How many items: "))
+# some_list: list[int] = []
+# for i in range(1,total_items + 1):
+#     item = int(input(f"Item {i}: "))
+#     some_list.append(item)
+# print(some_list)
+
+"""Problem 14
+Please write a program which asks the user to choose between addition and removal.
+Depending on the choice, the program adds an item to or removes an item from the end of a list.
+The item that is added must always be one greater than the last item in the list. The first item to be added must be 1.
+"""
+# starting_list: list [int] = []
+# count: int = 1
+
+# while True:
+#     print(f"The list is now: {starting_list}")
+#     option: str = input("a(d)d, (r)emove or e(x)it: ")
+#     if option == "d":
+#         starting_list.append(count)
+#         count += 1
+#     elif option == "r":
+#         starting_list.pop(-1)
+#         count -= 1
+#     elif option == "x":
+#         break
+
+"""Problem 15
+Please write a program which asks the user for words. 
+If the user types in a word for the second time, the program should print out the number of different words typed in, and exit.
+"""
+# words: list[str] = []
+# while True:
+#     word: str = input("Word: ")
+#     if word not in words:
+#         words.append(word)
+#     else:
+#         break
+
+# print(f"You typed in {len(words)} different words")
+
+"""Problem 16
+Please write a program which asks the user to type in values and adds them to a list.
+After each addition, the list is printed out in two different ways:
+    -in the order the items were added
+    -ordered from smallest to greatest
+The program exits when the user types in 0.
+"""
+
+added_values: list[int] = []
+
+while True:
+    pass
