@@ -253,8 +253,204 @@ After each addition, the list is printed out in two different ways:
     -ordered from smallest to greatest
 The program exits when the user types in 0.
 """
+# normal_list: list[int] = []
+# formatted_list: list[int] = []
+# while True:
+#     item: int = int(input("New Item: "))
+#     if item == 0:
+#         print("Bye!")
+#         break
+#     else:
+#         normal_list.append(item)
+#         formatted_list.append(item)
+#         print(f"The list now: {normal_list}")
+#         print(f"The list in order: {sorted(formatted_list)}")
 
-added_values: list[int] = []
+"""Problem 17
+Please write a function named length which takes a list as its argument and returns the length of the list.
+"""
+# def length(some_list: list[int]) -> int:
+#     return len(some_list)
 
-while True:
-    pass
+"""Problem 18:
+Please write a function named mean, which takes a list of integers as an argument. The function returns the arithmetic mean of the values in the list.
+"""
+# def mean(numbers: list[int]) -> int:
+#     return sum(numbers) / len(numbers)
+
+"""Problem 19:
+Please write a function named range_of_list, which takes a list of integers as an argument.
+The function returns the difference between the smallest and the largest value in the list.
+"""
+# def range_of_list(numbers: list[int]) -> int:
+#     numbers.sort()
+#     return numbers[-1] - numbers[0]
+
+"""Problem 20:
+Please write a program which asks the user to type in a string. The program then prints each input character on a separate line. After each character there should be a star (*) printed on its own line.
+"""
+# some_string: str = input("Please type in a string: ")
+# for char in some_string:
+#     print(char)
+#     print("*")
+
+"""Problem 21:
+Please write a program which asks the user for a positive integer N. The program then prints out all numbers between -N and N inclusive, but leaves out the number 0. Each number should be printed on a separate line.
+"""
+# number: int = int(input("Please enter a positive number: "))
+# for i in range(-number,number + 1):
+#     if i == 0:
+#         continue
+#     else:
+#         print(i)
+
+"""Problem 22:
+Please write a function named list_of_stars, which takes a list of integers as its argument. The function should print out lines of star characters. The numbers in the list specify how many stars each line should contain.
+"""
+# def list_of_stars(number_stars: list[int]) -> None:
+#     for i in number_stars:
+#         print("*" * i)
+
+"""Problem 23
+Please write a function named anagrams, which takes two strings as arguments. The function returns True if the strings are anagrams of each other. Two words are anagrams if they contain exactly the same characters.
+"""
+# def anagrams(string_one: str, string_two: str) -> bool:
+#     if len(string_one) != len(string_two):
+#         return False
+#     else:
+#         for i in string_one:
+#             if i in string_two:
+#                 continue
+#             else:
+#                 return False
+#         return True
+
+"""Problem 24:
+Please write a function named palindromes, which takes a string argument and returns True if the string is a palindrome. Palindromes are words which are spelled exactly the same backwards and forwards.
+"""
+# def palindromes(word: str) -> bool:
+#     word_backwards = word[::-1]
+#     if word_backwards == word:
+#         print(f"{word} is a palindrome!")
+#         return True
+#     else:
+#         print("that wasn't a palindrome")
+#         return False
+    
+# found_palindrome = False
+# while not found_palindrome:
+#     word: str = input("Please type in a palindrome: ")
+#     if palindromes(word):
+#         found_palindrome = True
+#     else:
+#         continue
+
+"""Problem 25:
+Please write a function named sum_of_positives, which takes a list of integers as its argument. The function returns the sum of the positive values in the list.
+"""
+# def sum_of_positives(numbers: list[int]) -> int:
+#     total = 0
+#     for i in numbers:
+#         if i < 0:
+#             continue
+#         else:
+#             total += i
+#     return total
+
+"""Problem 26:
+Please write a function named even_numbers, which takes a list of integers as an argument. The function returns a new list containing the even numbers from the original list.
+"""
+# def even_numbers(numbers: list[int]) -> list[int]:
+#     even_nums: list[int] = []
+#     for num in numbers:
+#         if num % 2 == 0:
+#             even_nums.append(num)
+#     return even_nums
+
+"""Problem 27:
+Please write a function named list_sum which takes two lists of integers as arguments. The function returns a new list which contains the sums of the items at each index in the two original lists. You may assume both lists have the same number of items
+"""
+# def list_sum(list_one:list[int], list_two: list[int]) -> list[int]:
+#     sum_list: list[int] = []
+#     for i in range(len(list_one)):
+#         total = list_one[i] + list_two[i]
+#         sum_list.append(total)
+#     return sum_list
+
+"""Problem 28:
+Please write a function named distinct_numbers, which takes a list of integers as its argument. The function returns a new list containing the numbers from the original list in order of magnitude, and so that each distinct number is present only once.
+"""
+# def distinct_numbers(list_one:list[int]) -> list[int]:
+#     new_list: list[int] = []
+#     for i in list_one:
+#         if i not in new_list:
+#             new_list.append(i)
+#     return sorted(new_list)
+
+"""Problem 29:
+Please write a function named length_of_longest, which takes a list of strings as its argument. The function returns the length of the longest string.
+"""
+# def length_of_longest(some_list: list[str]) -> int:
+#     longest_string = 0
+#     for string in some_list:
+#         length = len(string)
+#         if length > longest_string:
+#             longest_string = length
+#     return longest_string
+
+"""Problem 30:
+Please write a function named shortest, which takes a list of strings as its argument. 
+The function returns whichever of the strings is the shortest. If more than one are equally short, the function can return any of the shortest strings (there will be no such situation in the tests).
+You may assume there will be no empty strings in the list.
+"""
+# def shortest(some_list: list[str]) -> str:
+#     shortest_str: float = float("inf")
+#     shortest_string: str = ""
+#     for i in some_list:
+#         length = len(i)
+#         if length < shortest_str:
+#             shortest_str = length
+#             shortest_string = i
+#     return shortest_string
+
+"""Problem 31:
+def all_the_longest(some_list: list[str]) -> list[str]:
+    long_strings: list[str] = []
+    size_of_string: int = 0
+
+    # get the length of longest string
+    for i in some_list:
+        length = len(i)
+        if length > size_of_string:
+            size_of_string = length
+
+    for i in some_list:
+        if len(i) >= size_of_string:
+            long_strings.append(i)
+
+    return long_strings
+"""
+
+"""Problem 32:
+Please write a function named formatted, which takes a list of floating point numbers as its argument. 
+The function returns a new list, which contains each element of the original list in string format, rounded to two decimal points.
+The order of the items in the list should remain unchanged.
+"""
+# def formatted(some_list: list[float]) -> list[str]:
+#     formatted_list: list[str] = []
+#     for i in some_list:
+#         formatted_list.append(f"{i:.2f}")
+#     return formatted_list
+
+"""Problem 33:
+Please write a function named everything_reversed, which takes a list of strings as its argument. 
+The function returns a new list with all of the items on the original list reversed.
+Also the order of items should be reversed on the new list.
+"""
+# def everything_reversed(some_list: list[str]) -> list[str]:
+#     new_list: list[str] = []
+#     copy_list: list[str] = some_list[::-1]
+#     for i in copy_list:
+#         word = i[::-1]
+#         new_list.append(word)
+#     return new_list
