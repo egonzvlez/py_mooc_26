@@ -455,4 +455,111 @@ Also the order of items should be reversed on the new list.
 #         new_list.append(word)
 #     return new_list
 
-"""Why wont this work"""
+""" Problem 34:
+Please write a function named most_common_character, which takes a string argument.
+The function returns the character which has the most occurrences within the string. 
+If there are many characters with equally many occurrences, the one which appears first in the string should be returned.
+"""
+# def most_common_character(some_string: str) -> str:
+#     letters: list[str] = []
+#     count: list[int] = []
+#     for i in some_string:
+#         letters.append(i)
+#     word: str = ""
+#     largest: int = 0
+#     for i in range(len(letters)):
+#         total = some_string.count(letters[i])
+#         if total > largest:
+#             largest = total
+#             word = letters[i]
+#     return word
+
+"""Problem 35:
+Please write a function named no_vowels, which takes a string argument. 
+The function returns a new string, which should be the same as the original but with all vowels removed.
+You can assume the string will contain only characters from the lowercase English alphabet a...z.
+"""
+# def no_vowels(word: str ) -> str:
+#     vowels: list[str] = ["a","e","i","o","u"]
+#     new_word = ""
+
+#     for letter in word:
+#         if letter in vowels:
+#             continue
+#         else:
+#             new_word += letter
+#     return new_word
+
+"""Problem 36:
+The Python string method isupper() returns True if a string consists of only uppercase characters.
+Please use the isupper method to write a function named no_shouting, which takes a list of strings as an argument.
+The function returns a new list, containing only those items from the original which do not consist of solely uppercase characters.
+# """
+# def no_shouting(some_words: list[str]) -> list[str]:
+#     non_shouting_words: list[str] = []
+
+#     for word in some_words:
+#         if word.isupper():
+#             continue
+#         else:
+#             non_shouting_words.append(word)
+
+#     return non_shouting_words
+
+"""Problem 37:
+Given a list of integers, let's decide that two consecutive items in the list are neighbours if their difference is 1. 
+So, items 1 and 2 would be neighbours, and so would items 56 and 55.
+Please write a function named longest_series_of_neighbours, which looks for the longest series of neighbours within the list, and returns its length.
+For example, in the list [1, 2, 5, 4, 3, 4] the longest list of neighbours would be [5, 4, 3, 4], with a length of 4.
+# """
+# def longest_series_of_neighbours(some_nums: list[int]) -> int:
+#     pass
+
+"""Problem 38:
+
+"""
+total: list[int] = []
+passed: list[int] = []
+
+
+while True:
+
+    user_exam_pt_and_exercises:str = input("Exam points and exercises completed: ").split()
+    if not user_exam_pt_and_exercises:
+        break
+    else:
+        exam_points: int = int(user_exam_pt_and_exercises[0])
+        exercises_completed: int = int(user_exam_pt_and_exercises[1])
+        if exam_points < 10:
+            total_points = exam_points + exercises_completed // 10
+            total.append(total_points)
+            passed.append(0)
+            continue
+        else:
+            exercise_points: int = exercises_completed // 10
+            total_points = exam_points + exercise_points
+            total.append(total_points)
+
+        if total_points <= 14:
+            passed.append(0)
+        elif total_points >= 15 and total_points <= 17:
+            passed.append(1)
+        elif total_points >= 18 and total_points <= 20:
+            passed.append(2)
+        elif total_points >= 21 and total_points <= 23:
+            passed.append(3)
+        elif total_points >= 24 and total_points <= 27:
+            passed.append(4)
+        elif total_points >= 28 and total_points <= 30:
+            passed.append(5)
+
+average_points: float = sum(total) / len(total)
+pass_percentage: float = sum(x>0 for x in passed) / len(total) * 100
+
+
+print("Statistics: ")
+print(f"Points average: {average_points}")
+print(f"Pass percentage:{pass_percentage} ")
+print("Grade distribution: ")
+for i in range(5,-1, -1):
+    print(f"{i}: {passed.count(i) * '*'}")
