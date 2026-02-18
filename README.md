@@ -13,10 +13,10 @@ This repository contains my solutions to the **Python Programming MOOC 2026** pr
 - Solutions are written in Python
 
 ## Progress
- - [x] Part 1
- - [x] Part 2
- - [x] Part 3
- - [] Part 4
+ - [X] Part 1 w/ 100%
+ - [X] Part 2 w/ 100%
+ - [X] Part 3 w/ 91% (1.26.26)
+ - [X] Part 4 w/ 94% (2.18.26)
  - [] Part 5
  - [] Part 6
  - [] Part 7
