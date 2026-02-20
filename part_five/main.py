@@ -163,3 +163,82 @@ These are the blocks the function should check, and they begin at the indexes (0
 #             return False
         
 #     return True
+
+"""Problem 8:
+Please write a function named double_items(numbers: list), which takes a list of integers as its argument.
+The function should return a new list, which contains all values from the original list doubled. The function should not change the original list.
+"""
+# def double_items(numbers: list[int]) -> list[int]:
+#     new_list: list[int] = []
+#     for num in numbers:
+#         new_list.append(num * 2)
+#     return new_list
+
+"""Problem 9:
+Please write a function named remove_smallest(numbers: list), which takes a list of integers as its argument.
+The functions should find and remove the smallest item in the list. You may assume there is a single smallest item in the list.
+The function should not have a return value - it should directly modify the list it receives as a parameter.
+"""
+# def remove_smallest(numbers: list[int]) -> None:
+#     smallest_value = numbers[0]
+#     smallest_index = 0
+
+#     for i in range(1,len(numbers)):
+#         if numbers[i] <= smallest_value:
+#             smallest_value = numbers[i]
+#             smallest_index = i
+#     numbers.pop(smallest_index)
+
+"""Problem 10:
+In this exercise we will complete two more functions for the sudoku project from the previous section: print_sudoku and add_number.
+
+The function print_sudoku(sudoku: list) takes a two-dimensional array representing a sudoku grid as its argument.
+The function should print out the grid in the format specified in the examples below.
+
+The function add_number(sudoku: list, row_no: int, column_no: int, number:int) takes a two-dimensional array representing a sudoku grid,
+two integers referring to the row and column indexes of a single square, and a single digit between 1 and 9, as its arguments.
+The function should add the digit to the specified location in the grid.
+"""
+# def print_sudoku(sudoku: list[list[int]]) -> None:
+#     for i in range(len(sudoku)):
+#         if i == 3 or i == 6:
+#             print()
+#         row = sudoku[i]
+#         for j in range(len(row)):
+#             if j == 3 or j == 6:
+#                 print(" ", end ="")
+#             if row[j] == 0:
+#                 print("_", end =" ")
+#             else:
+#                 print(row[j], end=" ")
+#         print()
+
+# def add_number(sudoku: list[list[int]], row_no: int, column_no: int, number:int):
+#     sudoku[row_no][column_no] = number
+
+"""Problem 11:
+This is the very last sudoku task. This time we will create a slightly different version of the function for adding new numbers to the grid.
+
+The function copy_and_add(sudoku: list, row_no: int, column_no: int, number: int) takes a two-dimensional array representing a sudoku grid, two integers referring to the row and column indexes of a single square, and a single digit between 1 and 9, as its arguments. 
+The function should return a copy of the original grid with the new digit added in the correct location. The function should not change the original grid received as a parameter.
+
+The print_sudoku function from the previous exercise could be useful for testing, and it is used in the example below:
+"""
+def print_sudoku(sudoku: list[list[int]]) -> None:
+    for i in range(len(sudoku)):
+        if i == 3 or i == 6:
+            print()
+        row = sudoku[i]
+        for j in range(len(row)):
+            if j == 3 or j == 6:
+                print(" ", end ="")
+            if row[j] == 0:
+                print("_", end =" ")
+            else:
+                print(row[j], end=" ")
+        print()
+
+def copy_and_add(sudoku:list[list[int]], row_no: int, column_no: int, number: int) -> list[list[int]]:
+    copy_sudoku: list[list[int]] = sudoku[:]
+    copy_sudoku[row_no][column_no] = number
+    return copy_sudoku
