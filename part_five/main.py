@@ -242,3 +242,32 @@ def copy_and_add(sudoku:list[list[int]], row_no: int, column_no: int, number: in
     copy_sudoku: list[list[int]] = sudoku[:]
     copy_sudoku[row_no][column_no] = number
     return copy_sudoku
+
+
+"""Problem: 12
+Please write a function named play_turn(game_board: list, x: int, y: int, piece: str), which places the given symbol at the given coordinates on the board. 
+The values of the coordinates on the board are between 0 and 2.
+NB: when compared to the sudoku exercises, the arguments the function takes are the other way around here. The column x comes first, and the row y second.
+
+The board consists of the following strings:
+
+    "": empty square
+    "X": player 1 symbol
+    "O": player 2 symbol
+
+The function should return True if the square was empty and the symbol was successfully placed on the game board.
+The function should return False if the square was occupied, or if the coordinates weren't valid.
+"""
+def play_turn(game_board: list[int], x: int, y: int, piece: str) -> bool:
+    # makes the function false
+    # square is occupied, or cordinates are invalid
+
+    if y > 2 or x > 2:
+        return False
+    if y < 0 or x < 0:
+        return False
+    if game_board[y][x]:
+        return False
+    else:
+        game_board[y][x] = piece
+        return True
