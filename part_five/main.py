@@ -224,24 +224,24 @@ The function should return a copy of the original grid with the new digit added 
 
 The print_sudoku function from the previous exercise could be useful for testing, and it is used in the example below:
 """
-def print_sudoku(sudoku: list[list[int]]) -> None:
-    for i in range(len(sudoku)):
-        if i == 3 or i == 6:
-            print()
-        row = sudoku[i]
-        for j in range(len(row)):
-            if j == 3 or j == 6:
-                print(" ", end ="")
-            if row[j] == 0:
-                print("_", end =" ")
-            else:
-                print(row[j], end=" ")
-        print()
+# def print_sudoku(sudoku: list[list[int]]) -> None:
+#     for i in range(len(sudoku)):
+#         if i == 3 or i == 6:
+#             print()
+#         row = sudoku[i]
+#         for j in range(len(row)):
+#             if j == 3 or j == 6:
+#                 print(" ", end ="")
+#             if row[j] == 0:
+#                 print("_", end =" ")
+#             else:
+#                 print(row[j], end=" ")
+#         print()
 
-def copy_and_add(sudoku:list[list[int]], row_no: int, column_no: int, number: int) -> list[list[int]]:
-    copy_sudoku: list[list[int]] = sudoku[:]
-    copy_sudoku[row_no][column_no] = number
-    return copy_sudoku
+# def copy_and_add(sudoku:list[list[int]], row_no: int, column_no: int, number: int) -> list[list[int]]:
+#     copy_sudoku: list[list[int]] = sudoku[:]
+#     copy_sudoku[row_no][column_no] = number
+#     return copy_sudoku
 
 
 """Problem: 12
@@ -258,16 +258,45 @@ The board consists of the following strings:
 The function should return True if the square was empty and the symbol was successfully placed on the game board.
 The function should return False if the square was occupied, or if the coordinates weren't valid.
 """
-def play_turn(game_board: list[int], x: int, y: int, piece: str) -> bool:
-    # makes the function false
-    # square is occupied, or cordinates are invalid
+# def play_turn(game_board: list[int], x: int, y: int, piece: str) -> bool:
+#     # makes the function false
+#     # square is occupied, or cordinates are invalid
 
-    if y > 2 or x > 2:
-        return False
-    if y < 0 or x < 0:
-        return False
-    if game_board[y][x]:
-        return False
-    else:
-        game_board[y][x] = piece
-        return True
+#     if y > 2 or x > 2:
+#         return False
+#     if y < 0 or x < 0:
+#         return False
+#     if game_board[y][x]:
+#         return False
+#     else:
+#         game_board[y][x] = piece
+#         return True
+
+"""Problem 13:
+Please write a function named transpose(matrix: list), which takes a two-dimensional integer array, i.e., a matrix, as its argument. 
+The function should transpose the matrix. Transposing means essentially flipping the matrix over its diagonal: columns become rows, and rows become columns.
+You may assume the matrix is a square matrix, so it will have an equal number of rows and columns.
+The function should not have a return value. The matrix should be modified directly through the reference.
+"""
+
+# def transpose(matrix: list):
+#     # Columns become rows and rows become columns
+#     copy_matrix = [i[:] for i in matrix]
+#     print("copy")
+#     print(copy_matrix)
+#     for i in range(len(matrix)):
+#         row = matrix[i]
+#         for j in range(len(matrix)):
+#             row[j] = copy_matrix[j][i]
+
+"""Problem 13:
+Please write a function named times_ten(start_index: int, end_index: int), which creates and returns a new dictionary. 
+The keys of the dictionary should be the numbers between start_index and end_index inclusive
+The value mapped to each key should be the key times ten."""
+# def times_ten(start_index: int, end_index: int) -> dict:
+#     new_dictionary = {}
+
+#     for i in range(start_index, end_index + 1):
+#         new_dictionary[i] = i * 10
+    
+#     return new_dictionary
