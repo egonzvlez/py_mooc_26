@@ -289,7 +289,7 @@ The function should not have a return value. The matrix should be modified direc
 #         for j in range(len(matrix)):
 #             row[j] = copy_matrix[j][i]
 
-"""Problem 13:
+"""Problem 14:
 Please write a function named times_ten(start_index: int, end_index: int), which creates and returns a new dictionary. 
 The keys of the dictionary should be the numbers between start_index and end_index inclusive
 The value mapped to each key should be the key times ten."""
@@ -300,3 +300,127 @@ The value mapped to each key should be the key times ten."""
 #         new_dictionary[i] = i * 10
     
 #     return new_dictionary
+
+"""Problem 15:
+Please write a function named factorials(n: int), which returns the factorials of the numbers 1 to n in a dictionary. 
+The number is the key, and the factorial of that number is the value mapped to it.
+A reminder: the factorial of the number n is written n! and is calculated by multiplying the number by each integer smaller than itself. 
+For example, the factorial of 4 is 4 * 3 * 2 * 1 = 24.
+An example of the function in action:
+"""
+# def factorials(n: int) -> dict:
+#     factorial_num = {}
+#     total = 1
+
+#     for i in range(1, n + 1):
+#         total *= i
+#         factorial_num[i] = total
+        
+#     return factorial_num
+
+
+"""Problem 16: 
+"""
+# def histogram(word: str) -> None:
+#     dict_count: dict = {}
+
+#     for letter in word:
+#         if letter not in dict_count:
+#             dict_count[letter] = "*"
+#         else:
+#             dict_count[letter] += "*"
+    
+#     for key,value in dict_count.items():
+#         print(f"{key} {value}")
+
+"""Problem 17:
+"""
+# Write your solution here
+
+# exit = False
+# phone_book = {}
+
+# while not exit:
+#     user_command = int(input("command(1 search, 2 add, 3 quit): "))
+#     #exit condition
+#     if user_command == 3:
+#         print("quitting...")
+#         exit = True
+#     elif user_command == 1: # searh user
+#         name: str = input("name: ")
+#         if name in phone_book:
+#             print(phone_book[name])
+#         else:
+#             print("no number")
+#     elif user_command == 2: # add user
+#         name: str = input("name: ")
+#         phone: str = input("number: ")
+
+#         if name not in phone_book:
+#             phone_book[name] = phone
+#         else:
+#             phone_book[name] = phone
+
+#         print("ok!")
+#     else:
+#         print("Please use valid input")
+#         continue
+
+"""Problem 18:
+"""
+# Write your solution here
+
+# exit = False
+# phone_book = {}
+
+# while not exit:
+#     user_command = int(input("command(1 search, 2 add, 3 quit): "))
+#     #exit condition
+#     if user_command == 3:
+#         print("quitting...")
+#         exit = True
+#     elif user_command == 1: # searh user
+#         name: str = input("name: ")
+#         if name in phone_book:
+#             print(phone_book[name][-1])
+#         else:
+#             print("no number")
+#     elif user_command == 2: # add user
+#         name: str = input("name: ")
+#         phone: str = input("number: ")
+
+#         if name not in phone_book:
+#             phone_book[name] = [phone]
+#         else:
+#             phone_book[name].append(phone)
+#         print("ok!")
+#     else:
+#         print("Please use valid input")
+#         continue
+
+"""Problem 20:
+"""
+# def invert(dictionary: dict):
+#     copy_dict = dictionary.copy()
+#     dictionary.clear()
+
+#     for key,value in copy_dict.items():
+#         dictionary[value] = key
+
+"""Problme 21:
+"""
+# def dict_of_numbers() -> dict:
+#     list_of_num = [
+#         "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+#         "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+#         "twenty", "twenty-one", "twenty-two", "twenty-three", "twenty-four", "twenty-five", "twenty-six", "twenty-seven", "twenty-eight", "twenty-nine",
+#         "thirty", "thirty-one", "thirty-two", "thirty-three", "thirty-four", "thirty-five", "thirty-six", "thirty-seven", "thirty-eight", "thirty-nine",
+#         "forty", "forty-one", "forty-two", "forty-three", "forty-four", "forty-five", "forty-six", "forty-seven", "forty-eight", "forty-nine",
+#         "fifty", "fifty-one", "fifty-two", "fifty-three", "fifty-four", "fifty-five", "fifty-six", "fifty-seven", "fifty-eight", "fifty-nine",
+#         "sixty", "sixty-one", "sixty-two", "sixty-three", "sixty-four", "sixty-five", "sixty-six", "sixty-seven", "sixty-eight", "sixty-nine",
+#         "seventy", "seventy-one", "seventy-two", "seventy-three", "seventy-four", "seventy-five", "seventy-six", "seventy-seven", "seventy-eight", "seventy-nine",
+#         "eighty", "eighty-one", "eighty-two", "eighty-three", "eighty-four", "eighty-five", "eighty-six", "eighty-seven", "eighty-eight", "eighty-nine",
+#         "ninety", "ninety-one", "ninety-two", "ninety-three", "ninety-four", "ninety-five", "ninety-six", "ninety-seven", "ninety-eight", "ninety-nine",
+#     ]
+
+#     return {i: name for i, name in enumerate(list_of_num)}
